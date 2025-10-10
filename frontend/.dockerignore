@@ -1,0 +1,51 @@
+# Dependencies
+node_modules
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist
+build
+.next
+out
+
+# Convex backend (don't include in Docker)
+convex
+
+# Environment files
+.env*
+!.env.example
+
+# Version control
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+.DS_Store
+.cursor
+
+# Logs
+*.log
+
+# Testing
+coverage
+.nyc_output
+
+# Cache
+.cache
+.eslintcache
+*.cache
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Misc
+README.md
+*.md
+nul
