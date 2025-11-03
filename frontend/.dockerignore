@@ -1,51 +1,34 @@
-# Dependencies
-node_modules
-package-lock.json
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# ============================================================================
+# .dockerignore – Exclude unnecessary files from the Docker build context
+# ============================================================================
 
-# Build outputs
+# Node modules & build artifacts
+node_modules
 dist
 build
 .next
 out
 
-# Convex backend (don't include in Docker)
-convex
+# Backend code (not needed in the frontend image)
+convex/
 
-# Environment files
+# Environment files – keep secrets out of the image
 .env*
-!.env.example
+.env
 
-# Version control
+# Version control & IDE metadata
 .git
 .gitignore
-
-# IDE
 .vscode
 .idea
 .DS_Store
-.cursor
 
-# Logs
+# Logs, coverage, and caches
 *.log
-
-# Testing
 coverage
-.nyc_output
-
-# Cache
 .cache
-.eslintcache
-*.cache
 
-# Docker
+# Docker configuration files
 Dockerfile
-.dockerignore
 docker-compose.yml
-
-# Misc
-README.md
-*.md
-nul
+docker-compose.override.yml
